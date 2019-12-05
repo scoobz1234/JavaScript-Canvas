@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang ='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Stephen Ouellette</title>
+    <!-- this is a link to the style.css file i made... -->
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HOMEWORK -->
+    <script>
+        //::::::::::::::::::::::::::::::::::::VARIABLES::::::::::::::::::::::::::::::::::::::::::
+        var multTable = "";                         // this is where we will store our user input...
+        var mt0 = "";                               // row 0 of our table...
+        var mt1 = "";                               // row 1 of our table...
+        var mt2 = "";                               // row 2 of our table...
+        var mt3 = "";                               // row 3 of our table...
+        var mt4 = "";                               // row 4 of our table...
+        var mt5 = "";                               // row 5 of our table...
+        var mt6 = "";                               // row 6 of our table...
+        var mt7 = "";                               // row 7 of our table...
+        var mt8 = "";                               // row 8 of our table...
+        var mt9 = "";                               // row 9 of our table...
+        var mt10 = "";                              // row 10 of our table...
+        var mt11 = "";                              // row 11 of our table...
+        var mt12 = "";                              // row 12 of our table...
+        var mt13 = "";                              // row 13 of our table...
+        var mt14 = "";                              // row 14 of our table...
+        var table2 = "";                            // this is where we will store our table data
+        
+        var row0 = "";                              // row 0 of my table...
+        var row1 = "";                              // row 1 of my table...
+        var table = "";                             // this is where we will store our table data
+
+        //::::::::::::::::::::::::::::::::::::FUNCTIONS::::::::::::::::::::::::::::::::::::::::::
+        function mathTable (multTable){
+            mt0 =  "<tr><td>0 * "  + multTable + " = " + (multTable * 0)  + "</td></tr>";
+            mt1 =  "<tr><td>1 * "  + multTable + " = " + (multTable * 1)  + "</td></tr>";
+            mt2 =  "<tr><td>2 * "  + multTable + " = " + (multTable * 2)  + "</td></tr>";
+            mt3 =  "<tr><td>3 * "  + multTable + " = " + (multTable * 3)  + "</td></tr>";
+            mt4 =  "<tr><td>4 * "  + multTable + " = " + (multTable * 4)  + "</td></tr>";
+            mt5 =  "<tr><td>5 * "  + multTable + " = " + (multTable * 5)  + "</td></tr>";
+            mt6 =  "<tr><td>6 * "  + multTable + " = " + (multTable * 6)  + "</td></tr>";
+            mt7 =  "<tr><td>7 * "  + multTable + " = " + (multTable * 7)  + "</td></tr>";
+            mt8 =  "<tr><td>8 * "  + multTable + " = " + (multTable * 8)  + "</td></tr>";
+            mt9 =  "<tr><td>9 * "  + multTable + " = " + (multTable * 9)  + "</td></tr>";
+            mt10 = "<tr><td>10 * " + multTable + " = " + (multTable * 10) + "</td></tr>";
+            mt11 = "<tr><td>11 * " + multTable + " = " + (multTable * 11) + "</td></tr>";
+            mt12 = "<tr><td>12 * " + multTable + " = " + (multTable * 12) + "</td></tr>";
+            mt13 = "<tr><td>13 * " + multTable + " = " + (multTable * 13) + "</td></tr>";
+            mt14 = "<tr><td>14 * " + multTable + " = " + (multTable * 14) + "</td></tr>";  
+            table = 
+                "<table id='tableOne'>" + 
+                mt0 + 
+                mt1 + 
+                mt2 + 
+                mt3 + 
+                mt4 + 
+                mt5 + 
+                mt6 + 
+                mt7 + 
+                mt8 + 
+                mt9 + 
+                mt10 + 
+                mt11 + 
+                mt12 + 
+                mt13 + 
+                mt14 + 
+                "</table>"
+            // call my other function from here, and then call the quiz
+            myMathTable(multTable);1
+            quizlet(multTable);
+        }
+        
+        function myMathTable (multTable){
+            // now for my version....
+            row0 = "<tr><th>*</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th></tr>";
+            row1 = 
+                "<tr><th>" + multTable + 
+                "</th><td>" + (multTable * 0) + 
+                "</td><td>" + (multTable * 1) + 
+                "</td><td>" + (multTable * 2) + 
+                "</td><td>" + (multTable * 3) + 
+                "</td><td>" + (multTable * 4) + 
+                "</td><td>" + (multTable * 5) + 
+                "</td><td>" + (multTable * 6) + 
+                "</td><td>" + (multTable * 7) + 
+                "</td><td>" + (multTable * 8) + 
+                "</td><td>" + (multTable * 9) + 
+                "</td><td>" + (multTable * 10) + 
+                "</td><td>" + (multTable * 11) + 
+                "</td><td>" + (multTable * 12) + 
+                "</td><td>" + (multTable * 13) + 
+                "</td><td>" + (multTable * 14) + "</td></tr>";  
+             table2 = "<table id='tableTwo'>" + row0 + row1 + "</table>"
+        }
+  
+        function quizlet (multTable) {
+            var rndNum = Math.floor(Math.random() * 15);5
+            var quiz = prompt("What does " + multTable + " * " + rndNum + " = ");
+            var b = false;
+            var mult = multTable * rndNum;
+            if (quiz === mult.toString()) {
+                alert("Correct: Great Job!");
+                b = true;
+            }
+            else {
+                alert("Incorrect: Sorry...");
+            }
+            if (!b) {
+                quizlet();
+            }
+        }
+         
+        //::::::::::::::::::::::::::::::::::::USER INTERACTION::::::::::::::::::::::::::::::::::
+        mathTable(prompt("Build your multiplication table using?","5"));
+        
+    </script>
+    <div>
+        <h1><script>document.write(table);</script></h1>
+        <script>console.log(table)</script>
+        <h1><script>document.write(table2);</script></h1>
+    </div>
+</body>
+</html>
